@@ -11,19 +11,21 @@
         android:id="@+id/word_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@tools:sample/full_names"
-        android:textSize="22sp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="16dp"/>
+        android:fontFamily="@font/alegreya_sans_medium"
+        android:textSize="22sp"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/meaning_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="@tools:sample/lorem[5]"
-        android:textSize="18sp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="16dp"/>
+        android:fontFamily="@font/alegreya_sans"
+        android:textSize="18sp"
+        tools:text="@tools:sample/lorem[5]" />
 
     <View
         android:id="@+id/divider"
