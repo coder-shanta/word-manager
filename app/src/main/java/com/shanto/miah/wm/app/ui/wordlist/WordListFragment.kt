@@ -16,7 +16,6 @@ import com.shanto.miah.wm.app.data.entitys.Word
 import com.shanto.miah.wm.app.data.repositories.WordRepo
 import com.shanto.miah.wm.app.databinding.FragmentWordListBinding
 
-
 class WordListFragment : Fragment(), ClickListner {
 
     private lateinit var db: DB
@@ -42,9 +41,13 @@ class WordListFragment : Fragment(), ClickListner {
 
         viewModel.getWords().observe(viewLifecycleOwner, {
             if (it.isNotEmpty()) {
+
+                var lm = LinearLayoutManager(context)
+                lm.stackFromEnd = true
+
                 binding.wordListRecyclerview.apply {
                     adapter = WordListAdapter(it, this@WordListFragment)
-                    layoutManager = LinearLayoutManager(context)
+                    layoutManager = lm
                 }
             }
         })

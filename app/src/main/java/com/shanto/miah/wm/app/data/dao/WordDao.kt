@@ -6,7 +6,7 @@ import com.shanto.miah.wm.app.data.entitys.Word
 
 @Dao
 interface WordDao {
-    @Query("SELECT * FROM word ORDER BY id DESC")
+    @Query("SELECT * FROM word ORDER BY id ASC")
     fun getWords() : LiveData<List<Word>>
 
     @Insert
